@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>白頭翁不吃小米</title>
+    <!-- Logo 的獨立樣式 -->
+    <link rel="stylesheet" href="logo.css" />
+    <!-- 桌機版樣式 -->
+    <link rel="stylesheet" href="style-desktop.css" />
+    <!-- 手機版樣式 -->
+    <link rel="stylesheet" href="style-mobile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 側邊欄／上方區塊 -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <!-- ☰ 漢堡選單按鈕 -->
+          <button class="hamburger" aria-label="選單切換"></button>
+
+          <!-- 網站標題 -->
+          <h1 class="site-title">白頭翁不吃小米</h1>
+
+          <!-- 白頭翁 Logo 組合（SVG + 元件） -->
+          <div class="logo">
+            <!-- 頭部圖形 -->
+            <svg
+              class="head"
+              viewBox="0 0 100 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5,45 Q25,5 65,10 Q80,15 90,40 Q60,15 23,31 Z"
+                fill="black"
+              />
+            </svg>
+            <!-- 下巴圖形 -->
+            <svg
+              class="chin"
+              viewBox="0 0 100 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0,10 Q10,10 70,15 Q90,15 110,0 Q95,40 60,35 Q30,30 0,30 Z"
+                fill="black"
+              />
+            </svg>
+            <!-- 眼睛 -->
+            <div class="eye"></div>
+            <!-- 嘴巴 -->
+            <div class="beak"></div>
+          </div>
+        </div>
+
+        <!-- 導覽選單 -->
+        <nav class="nav">
+          <ul>
+            <li>白頭翁的特性</li>
+            <li>白頭翁的故事</li>
+            <li>白頭翁的美照</li>
+            <li>白頭翁的危機</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- 主內容區 -->
+      <main class="main">
+        <!-- 頁首區塊（圖片與介紹） -->
+        <section class="hero">
+          <!-- 白頭翁圖片 -->
+          <img src="picture.jpg" alt="白頭翁" class="hero-img" />
+          <!-- 圖片上的文字說明 -->
+          <div class="hero-text">
+            <h1>白頭翁 <span>(Chinese bulbul)</span></h1>
+            <p>
+              又名白頭鵯。以果實、昆蟲為主食，無法消化小米、穀類。 平均壽命約
+              8~10 年。
+            </p>
+          </div>
+        </section>
+
+        <!-- 特徵區塊（外觀／棲地／食性） -->
+        <section class="content">
+          <!-- 外觀 -->
+          <div class="feature">
+            <div class="feature-title">外觀</div>
+            <div class="feature-content">
+              白頭鵯體長約17到22公分，額至頭頂純黑色而富有光澤，兩眼上方至後枕白色，
+              形成一白色枕環。耳羽後部有一白斑，此白環與白斑在黑色的頭部均極為醒目，
+              老鳥的枕羽(後頭部)更潔白，所以又叫「白頭翁」。
+            </div>
+          </div>
+          <!-- 棲地 -->
+          <div class="feature">
+            <div class="feature-title">棲地</div>
+            <div class="feature-content">
+              白頭翁和麻雀、綠繡眼合稱「城市三寶」，常成群出現在平原區灌木叢、丘陵樹林地帶，
+              以及校園、公園、庭院、行道中的各種高高的電線與樹上。
+            </div>
+          </div>
+          <!-- 食性 -->
+          <div class="feature">
+            <div class="feature-title">食性</div>
+            <div class="feature-content">
+              以果樹的漿果和種子為主食，並時常飛入果園偷吃果實，還會吃嫩葉嫩芽，
+              尤其是胡蝶蘭的嫩葉嫩芽葉，偶爾啄食昆蟲。
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JavaScript 功能區：控制選單開關 -->
+    <script>
+      const hamburger = document.querySelector(".hamburger"); // 漢堡按鈕
+      const nav = document.querySelector(".nav"); // 導覽選單
+      const items = document.querySelectorAll(".nav li"); // 所有選單項目
+
+      // 點擊漢堡切換選單開合狀態
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        hamburger.classList.toggle("open");
+      });
+
+      // 點選選單項目後自動收起選單 + 設定 active 樣式
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          items.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+          nav.classList.remove("open");
+          hamburger.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>

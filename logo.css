@@ -1,0 +1,56 @@
+.logo {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  /* overflow: hidden; */
+}
+
+/* 頭 */
+.head {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  width: 65%;
+  height: 38%;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+/* 下巴 */
+.chin {
+  position: absolute;
+  bottom: 18%;
+  left: 11%;
+  width: 75%;
+  height: 22%;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+/* 眼睛 */
+.eye {
+  position: absolute;
+  top: 45%;
+  left: 54%;
+  width: 11%;
+  height: 11%;
+  background: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 嘴巴*/
+.beak {
+  position: absolute;
+  top: 42%;
+  right: 14%;
+  width: 13%;
+  height: 8%;
+  background: #000000;
+  border-top-right-radius: 100% 100%;
+  transform: rotate(-12deg);
+  z-index: 2;
+}
